@@ -37,6 +37,8 @@ void loop()
 	calculator();
 	gain(0.2);
 	outputData();
+
+	loop();
 }
 
 
