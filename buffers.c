@@ -29,8 +29,14 @@ void setupBuffer()
 	}
 }
 
-void gain()
+void gain(float gain)
 {
+	for(int nmr = 0; nmr<amount; nmr++)
+	{
+		int index = (outputBuffers+nmr)->index;
+		(outputBuffers+nmr)->bufferR[index] = ((outputBuffers+nmr)->bufferR[index])*gain;
+		(outputBuffers+nmr)->bufferL[index] = ((outputBuffers+nmr)->bufferL[index])*gain;
+	}
 
 }
 

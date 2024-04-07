@@ -8,8 +8,9 @@
 #include "audio.h"
 
 void setupBuffer();
-void gain();
+void gain(float gain);
 void updateInputBuffer();
 void calculator();
+void outputData();
 
 #endif
