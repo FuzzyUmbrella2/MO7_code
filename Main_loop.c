@@ -34,8 +34,9 @@ void loop()
 	Xil_Out32(I2S_STATUS_REG, status_reg);
 
 	updateInputBuffer();
-	calculator();
-	gain(0.2);
+	regular();
+	//calculator();
+	//gain(0.2);
 	outputData();
 
 	loop();

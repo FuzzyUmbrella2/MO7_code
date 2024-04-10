@@ -12,5 +12,6 @@ void gain(float gain);
 void updateInputBuffer();
 void calculator();
 void outputData();
+void regular();
 
 #endif

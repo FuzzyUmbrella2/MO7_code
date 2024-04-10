@@ -80,6 +80,7 @@ void updateOutputBuffer(int nmr, float sumR, float sumL)
 
 	(outputBuffers+nmr)->bufferR[index] = sumR;
 	(outputBuffers+nmr)->bufferL[index] = sumL;
+	xil_printf("%.2f\n",sumR);
 }
 
 void calculator()
@@ -135,6 +136,18 @@ void calculator()
 
 		updateOutputBuffer(nmr, sumR, sumL);
 	}
+}
+
+void regular()
+{
+	for(int nmr = 0; nmr<amount; nmr++)
+	{
+		int index = (outputBuffers+nmr)->index;
+		float right = (outputBuffers+nmr)->bufferR[index];
+		float left = (outputBuffers+nmr)->bufferL[index];
+		updateOutputBuffer(nmr, right, left);
+	}
+
 }
 
 void outputData()
